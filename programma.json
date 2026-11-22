@@ -1,0 +1,2036 @@
+{
+ "inizio": "2026-11-23",
+ "massimali": {
+  "panca": 122.5,
+  "military": 60,
+  "m2": 62.5,
+  "stacco": 110
+ },
+ "settimane": [
+  {
+   "n": 1,
+   "lunedi": "2026-11-23",
+   "titolo": "Onda 1 · settimana 1",
+   "giorni": {
+    "lun": [
+     {
+      "es": "Panca piana · progressione 1",
+      "pct": 65,
+      "base": "panca",
+      "rip": "6",
+      "serie": "9",
+      "nota": ""
+     },
+     {
+      "es": "Stacco · carico fisso",
+      "pct": 65,
+      "base": "stacco",
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Bicipiti e tricipiti, core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "mar": [
+     {
+      "es": "Military · progressione",
+      "pct": 70,
+      "base": "military",
+      "rip": "6",
+      "serie": "6",
+      "nota": ""
+     },
+     {
+      "es": "Panca stretta · carico fisso",
+      "pct": 60,
+      "base": "panca",
+      "rip": "6",
+      "serie": "5",
+      "nota": "−2,5% se troppo pesante dopo la military"
+     },
+     {
+      "es": "Pressa · pesante",
+      "kg": 170,
+      "rip": "6",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "3",
+      "nota": "da ~60 kg; tutte a 12 → +10 kg"
+     },
+     {
+      "es": "Lat machine",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "gio": [
+     {
+      "es": "Panca piana · progressione 2",
+      "pct": 80,
+      "base": "panca",
+      "rip": "3",
+      "serie": "8",
+      "nota": ""
+     },
+     {
+      "es": "Stacco fermo in incastro",
+      "schema": "5 MAV",
+      "rip": "5",
+      "serie": "1",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Military · media",
+      "pct": 67.5,
+      "base": "military",
+      "rip": "5",
+      "serie": "5",
+      "nota": "veloce, lontano dal cedimento"
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "ven": [
+     {
+      "es": "Military · ramping",
+      "schema": "6 MAV + back-off 80%",
+      "rip": "6 / 8",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno · rif. ciclo scorso: 4 MAV 50, 3 MAV 52,5, 2 MAV 57,5"
+     },
+     {
+      "es": "Panca 3 fermi in discesa · ramping",
+      "schema": "3 MAV + back-off 85%",
+      "rip": "3 / 3",
+      "serie": "1 + 4",
+      "nota": "rif. ciclo scorso: 3 MAV 90, 2 MAV 95, 1 MAV 100"
+     },
+     {
+      "es": "Pressa · volume",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "4",
+      "nota": "da 140 kg; tutte a 12 → +5 kg"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "6-8",
+      "serie": "3",
+      "nota": "da ~70 kg; tutte a 8 → +10 kg"
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ]
+   }
+  },
+  {
+   "n": 2,
+   "lunedi": "2026-11-30",
+   "titolo": "Onda 1 · settimana 2",
+   "giorni": {
+    "lun": [
+     {
+      "es": "Panca piana · progressione 1",
+      "pct": 70,
+      "base": "panca",
+      "rip": "5",
+      "serie": "8",
+      "nota": ""
+     },
+     {
+      "es": "Stacco · carico fisso",
+      "pct": 70,
+      "base": "stacco",
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Bicipiti e tricipiti, core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "mar": [
+     {
+      "es": "Military · progressione",
+      "pct": 75,
+      "base": "military",
+      "rip": "6",
+      "serie": "6",
+      "nota": ""
+     },
+     {
+      "es": "Panca stretta · carico fisso",
+      "pct": 65,
+      "base": "panca",
+      "rip": "5",
+      "serie": "5",
+      "nota": "−2,5% se troppo pesante dopo la military"
+     },
+     {
+      "es": "Pressa · pesante",
+      "kg": 180,
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "3",
+      "nota": "da ~60 kg; tutte a 12 → +10 kg"
+     },
+     {
+      "es": "Lat machine",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "gio": [
+     {
+      "es": "Panca piana · progressione 2",
+      "pct": 85,
+      "base": "panca",
+      "rip": "2",
+      "serie": "8",
+      "nota": ""
+     },
+     {
+      "es": "Stacco fermo in incastro",
+      "schema": "3 MAV + back-off 90%",
+      "rip": "3 / 3",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Military · media",
+      "pct": 67.5,
+      "base": "military",
+      "rip": "5",
+      "serie": "5",
+      "nota": "veloce, lontano dal cedimento"
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "ven": [
+     {
+      "es": "Military · ramping",
+      "schema": "5 MAV + back-off 90%",
+      "rip": "5 / 6",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Panca 3 fermi in discesa · ramping",
+      "schema": "2 MAV + back-off 85%",
+      "rip": "2 / 2",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Pressa · volume",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "4",
+      "nota": "da 140 kg; tutte a 12 → +5 kg"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "6-8",
+      "serie": "3",
+      "nota": "da ~70 kg; tutte a 8 → +10 kg"
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ]
+   }
+  },
+  {
+   "n": 3,
+   "lunedi": "2026-12-07",
+   "titolo": "Onda 1 · settimana 3",
+   "giorni": {
+    "lun": [
+     {
+      "es": "Panca piana · progressione 1",
+      "pct": 75,
+      "base": "panca",
+      "rip": "4",
+      "serie": "6",
+      "nota": "ultime 2 serie solo se le prime 4 sono veloci"
+     },
+     {
+      "es": "Stacco · carico fisso",
+      "pct": 75,
+      "base": "stacco",
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Bicipiti e tricipiti, core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "mar": [
+     {
+      "es": "Military · progressione",
+      "pct": 80,
+      "base": "military",
+      "rip": "4",
+      "serie": "6",
+      "nota": ""
+     },
+     {
+      "es": "Panca stretta · carico fisso",
+      "pct": 70,
+      "base": "panca",
+      "rip": "4",
+      "serie": "5",
+      "nota": "−2,5% se troppo pesante dopo la military"
+     },
+     {
+      "es": "Pressa · pesante",
+      "kg": 190,
+      "rip": "4",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "3",
+      "nota": "da ~60 kg; tutte a 12 → +10 kg"
+     },
+     {
+      "es": "Lat machine",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "gio": [
+     {
+      "es": "Panca piana · progressione 2",
+      "pct": 90,
+      "base": "panca",
+      "rip": "1",
+      "serie": "6",
+      "nota": "ultime 2 singole solo se le prime 4 sono veloci"
+     },
+     {
+      "es": "Stacco fermo in incastro",
+      "schema": "2 MAV + back-off 90%",
+      "rip": "2 / 2",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Military · media",
+      "pct": 67.5,
+      "base": "military",
+      "rip": "5",
+      "serie": "5",
+      "nota": "veloce, lontano dal cedimento"
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "ven": [
+     {
+      "es": "Military · ramping",
+      "schema": "4 MAV + back-off 90%",
+      "rip": "4 / 5",
+      "serie": "1 + 5",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Panca 3 fermi in discesa · ramping",
+      "schema": "1 MAV + back-off 85%",
+      "rip": "1 / 1",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Pressa · volume",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "4",
+      "nota": "da 140 kg; tutte a 12 → +5 kg"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "6-8",
+      "serie": "3",
+      "nota": "da ~70 kg; tutte a 8 → +10 kg"
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ]
+   }
+  },
+  {
+   "n": 4,
+   "lunedi": "2026-12-14",
+   "titolo": "Onda 2 · settimana 1",
+   "giorni": {
+    "lun": [
+     {
+      "es": "Panca piana · progressione 1",
+      "pct": 67.5,
+      "base": "panca",
+      "rip": "6",
+      "serie": "8",
+      "nota": ""
+     },
+     {
+      "es": "Stacco · carico fisso",
+      "pct": 80,
+      "base": "stacco",
+      "rip": "2",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Bicipiti e tricipiti, core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "mar": [
+     {
+      "es": "Military · progressione",
+      "pct": 80,
+      "base": "military",
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Panca stretta · carico fisso",
+      "pct": 62.5,
+      "base": "panca",
+      "rip": "6",
+      "serie": "5",
+      "nota": "−2,5% se troppo pesante dopo la military"
+     },
+     {
+      "es": "Pressa · pesante",
+      "kg": 180,
+      "rip": "6",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "3",
+      "nota": "da ~60 kg; tutte a 12 → +10 kg"
+     },
+     {
+      "es": "Lat machine",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "gio": [
+     {
+      "es": "Panca piana · progressione 2",
+      "pct": 82.5,
+      "base": "panca",
+      "rip": "3",
+      "serie": "6",
+      "nota": ""
+     },
+     {
+      "es": "Stacco fermo in incastro",
+      "schema": "1 MAV",
+      "rip": "1",
+      "serie": "1",
+      "nota": "nessun back-off; back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Military · media",
+      "pct": 67.5,
+      "base": "military",
+      "rip": "5",
+      "serie": "5",
+      "nota": "veloce, lontano dal cedimento"
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "ven": [
+     {
+      "es": "Military · ramping",
+      "schema": "3 MAV + back-off 90%",
+      "rip": "3 / 4",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Panca discesa 5\" · ramping",
+      "schema": "3 MAV + back-off 85%",
+      "rip": "3 / 3",
+      "serie": "1 + 4",
+      "nota": "rif. ciclo scorso: 3 MAV non chiuso a 95, 2 MAV 102,5, 1 MAV 105"
+     },
+     {
+      "es": "Pressa · volume",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "4",
+      "nota": "da 140 kg; tutte a 12 → +5 kg"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "6-8",
+      "serie": "3",
+      "nota": "da ~70 kg; tutte a 8 → +10 kg"
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ]
+   }
+  },
+  {
+   "n": 5,
+   "lunedi": "2026-12-21",
+   "titolo": "Onda 2 · settimana 2",
+   "giorni": {
+    "lun": [
+     {
+      "es": "Panca piana · progressione 1",
+      "pct": 72.5,
+      "base": "panca",
+      "rip": "5",
+      "serie": "6",
+      "nota": ""
+     },
+     {
+      "es": "Stacco · carico fisso",
+      "pct": 70,
+      "base": "stacco",
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Bicipiti e tricipiti, core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "mar": [
+     {
+      "es": "Military · progressione",
+      "pct": 85,
+      "base": "military",
+      "rip": "3",
+      "serie": "6",
+      "nota": ""
+     },
+     {
+      "es": "Panca stretta · carico fisso",
+      "pct": 67.5,
+      "base": "panca",
+      "rip": "5",
+      "serie": "5",
+      "nota": "−2,5% se troppo pesante dopo la military"
+     },
+     {
+      "es": "Pressa · pesante",
+      "kg": 190,
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "3",
+      "nota": "da ~60 kg; tutte a 12 → +10 kg"
+     },
+     {
+      "es": "Lat machine",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "gio": [
+     {
+      "es": "Panca piana · progressione 2",
+      "pct": 87.5,
+      "base": "panca",
+      "rip": "2",
+      "serie": "7",
+      "nota": ""
+     },
+     {
+      "es": "Stacco fermo al ginocchio",
+      "schema": "5 MAV",
+      "rip": "5",
+      "serie": "1",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Military · media",
+      "pct": 67.5,
+      "base": "military",
+      "rip": "5",
+      "serie": "5",
+      "nota": "veloce, lontano dal cedimento"
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "ven": [
+     {
+      "es": "Military · ramping",
+      "schema": "2 MAV + back-off 80%",
+      "rip": "2 / 5",
+      "serie": "1 + 5",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Panca discesa 5\" · ramping",
+      "schema": "2 MAV + back-off 85%",
+      "rip": "2 / 2",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Pressa · volume",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "4",
+      "nota": "da 140 kg; tutte a 12 → +5 kg"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "6-8",
+      "serie": "3",
+      "nota": "da ~70 kg; tutte a 8 → +10 kg"
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ]
+   }
+  },
+  {
+   "n": 6,
+   "lunedi": "2026-12-28",
+   "titolo": "Onda 2 · settimana 3",
+   "giorni": {
+    "lun": [
+     {
+      "es": "Panca piana · progressione 1",
+      "pct": 77.5,
+      "base": "panca",
+      "rip": "4",
+      "serie": "6",
+      "nota": "ultime 2 serie solo se le prime 4 sono veloci"
+     },
+     {
+      "es": "Stacco · carico fisso",
+      "pct": 75,
+      "base": "stacco",
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Bicipiti e tricipiti, core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "mar": [
+     {
+      "es": "Military · TEST (1 MAV)",
+      "schema": "1 MAV",
+      "rip": "1",
+      "serie": "1",
+      "nota": "il risultato è M2: inseriscilo nei massimali"
+     },
+     {
+      "es": "Panca stretta · carico fisso",
+      "pct": 72.5,
+      "base": "panca",
+      "rip": "4",
+      "serie": "5",
+      "nota": "−2,5% se troppo pesante dopo la military"
+     },
+     {
+      "es": "Pressa · pesante",
+      "kg": 200,
+      "rip": "4",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "3",
+      "nota": "da ~60 kg; tutte a 12 → +10 kg"
+     },
+     {
+      "es": "Lat machine",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "gio": [
+     {
+      "es": "Panca piana · progressione 2",
+      "pct": 92.5,
+      "base": "panca",
+      "rip": "1",
+      "serie": "6",
+      "nota": "ultime 2 singole solo se le prime 4 sono veloci"
+     },
+     {
+      "es": "Stacco fermo al ginocchio",
+      "schema": "3 MAV + back-off 90%",
+      "rip": "3 / 3",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Military · media",
+      "pct": 67.5,
+      "base": "military",
+      "rip": "5",
+      "serie": "5",
+      "nota": "veloce, lontano dal cedimento"
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "ven": [
+     {
+      "es": "Military",
+      "pct": 80,
+      "base": "m2",
+      "rip": "2",
+      "serie": "4",
+      "nota": "scarico"
+     },
+     {
+      "es": "Panca discesa 5\" · ramping",
+      "schema": "1 MAV + back-off 85%",
+      "rip": "1 / 1",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Pressa · volume",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "4",
+      "nota": "da 140 kg; tutte a 12 → +5 kg"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "6-8",
+      "serie": "3",
+      "nota": "da ~70 kg; tutte a 8 → +10 kg"
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ]
+   }
+  },
+  {
+   "n": 7,
+   "lunedi": "2027-01-04",
+   "titolo": "Onda 3 · settimana 1",
+   "giorni": {
+    "lun": [
+     {
+      "es": "Panca piana · progressione 1",
+      "pct": 70,
+      "base": "panca",
+      "rip": "6",
+      "serie": "6",
+      "nota": ""
+     },
+     {
+      "es": "Stacco · carico fisso",
+      "pct": 80,
+      "base": "stacco",
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Bicipiti e tricipiti, core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "mar": [
+     {
+      "es": "Military · progressione",
+      "pct": 70,
+      "base": "m2",
+      "rip": "6",
+      "serie": "6",
+      "nota": ""
+     },
+     {
+      "es": "Panca stretta · carico fisso",
+      "pct": 65,
+      "base": "panca",
+      "rip": "6",
+      "serie": "5",
+      "nota": "−2,5% se troppo pesante dopo la military"
+     },
+     {
+      "es": "Pressa · pesante",
+      "kg": 190,
+      "rip": "6",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "3",
+      "nota": "da ~60 kg; tutte a 12 → +10 kg"
+     },
+     {
+      "es": "Lat machine",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "gio": [
+     {
+      "es": "Panca piana · progressione 2",
+      "pct": 85,
+      "base": "panca",
+      "rip": "3",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Stacco fermo al ginocchio",
+      "schema": "2 MAV + back-off 90%",
+      "rip": "2 / 2",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Military · media",
+      "pct": 67.5,
+      "base": "m2",
+      "rip": "5",
+      "serie": "5",
+      "nota": "veloce, lontano dal cedimento"
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "ven": [
+     {
+      "es": "Military · ramping",
+      "schema": "6 MAV + back-off 80%",
+      "rip": "6 / 8",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno · rif. ciclo scorso: 4 MAV 50, 3 MAV 52,5, 2 MAV 57,5"
+     },
+     {
+      "es": "Panca fermo lungo al petto (2-3\") · ramping",
+      "schema": "3 MAV + back-off 85%",
+      "rip": "3 / 3",
+      "serie": "1 + 4",
+      "nota": "nessun riferimento: trovare il MAV a piccoli salti"
+     },
+     {
+      "es": "Pressa · volume",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "4",
+      "nota": "da 140 kg; tutte a 12 → +5 kg"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "6-8",
+      "serie": "3",
+      "nota": "da ~70 kg; tutte a 8 → +10 kg"
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ]
+   }
+  },
+  {
+   "n": 8,
+   "lunedi": "2027-01-11",
+   "titolo": "Onda 3 · settimana 2",
+   "giorni": {
+    "lun": [
+     {
+      "es": "Panca piana · progressione 1",
+      "pct": 75,
+      "base": "panca",
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Stacco · carico fisso",
+      "pct": 85,
+      "base": "stacco",
+      "rip": "2",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Bicipiti e tricipiti, core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "mar": [
+     {
+      "es": "Military · progressione",
+      "pct": 75,
+      "base": "m2",
+      "rip": "6",
+      "serie": "6",
+      "nota": ""
+     },
+     {
+      "es": "Panca stretta · carico fisso",
+      "pct": 70,
+      "base": "panca",
+      "rip": "5",
+      "serie": "5",
+      "nota": "−2,5% se troppo pesante dopo la military"
+     },
+     {
+      "es": "Pressa · pesante",
+      "kg": 200,
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "3",
+      "nota": "da ~60 kg; tutte a 12 → +10 kg"
+     },
+     {
+      "es": "Lat machine",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "gio": [
+     {
+      "es": "Panca piana · progressione 2",
+      "pct": 90,
+      "base": "panca",
+      "rip": "2",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Stacco fermo al ginocchio",
+      "schema": "1 MAV",
+      "rip": "1",
+      "serie": "1",
+      "nota": "nessun back-off; back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Military · media",
+      "pct": 67.5,
+      "base": "m2",
+      "rip": "5",
+      "serie": "5",
+      "nota": "veloce, lontano dal cedimento"
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "ven": [
+     {
+      "es": "Military · ramping",
+      "schema": "5 MAV + back-off 90%",
+      "rip": "5 / 6",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Panca fermo lungo al petto (2-3\") · ramping",
+      "schema": "2 MAV + back-off 85%",
+      "rip": "2 / 2",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Pressa · volume",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "4",
+      "nota": "da 140 kg; tutte a 12 → +5 kg"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "6-8",
+      "serie": "3",
+      "nota": "da ~70 kg; tutte a 8 → +10 kg"
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ]
+   }
+  },
+  {
+   "n": 9,
+   "lunedi": "2027-01-18",
+   "titolo": "Onda 3 · settimana 3",
+   "giorni": {
+    "lun": [
+     {
+      "es": "Panca piana · progressione 1",
+      "pct": 80,
+      "base": "panca",
+      "rip": "4",
+      "serie": "6",
+      "nota": "ultime 2 serie solo se le prime 4 sono veloci"
+     },
+     {
+      "es": "Stacco · carico fisso",
+      "pct": 75,
+      "base": "stacco",
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Bicipiti e tricipiti, core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "mar": [
+     {
+      "es": "Military · progressione",
+      "pct": 80,
+      "base": "m2",
+      "rip": "4",
+      "serie": "6",
+      "nota": ""
+     },
+     {
+      "es": "Panca stretta · carico fisso",
+      "pct": 75,
+      "base": "panca",
+      "rip": "4",
+      "serie": "5",
+      "nota": "−2,5% se troppo pesante dopo la military"
+     },
+     {
+      "es": "Pressa · pesante",
+      "kg": 210,
+      "rip": "4",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "3",
+      "nota": "da ~60 kg; tutte a 12 → +10 kg"
+     },
+     {
+      "es": "Lat machine",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "gio": [
+     {
+      "es": "Panca piana · progressione 2",
+      "pct": 95,
+      "base": "panca",
+      "rip": "1",
+      "serie": "6",
+      "nota": "ultime 2 singole solo se le prime 4 sono veloci"
+     },
+     {
+      "es": "Stacco standard",
+      "schema": "5 MAV",
+      "rip": "5",
+      "serie": "1",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Military · media",
+      "pct": 67.5,
+      "base": "m2",
+      "rip": "5",
+      "serie": "5",
+      "nota": "veloce, lontano dal cedimento"
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "ven": [
+     {
+      "es": "Military · ramping",
+      "schema": "4 MAV + back-off 90%",
+      "rip": "4 / 5",
+      "serie": "1 + 5",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Panca fermo lungo al petto (2-3\") · ramping",
+      "schema": "1 MAV + back-off 85%",
+      "rip": "1 / 1",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Pressa · volume",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "4",
+      "nota": "da 140 kg; tutte a 12 → +5 kg"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "6-8",
+      "serie": "3",
+      "nota": "da ~70 kg; tutte a 8 → +10 kg"
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ]
+   }
+  },
+  {
+   "n": 10,
+   "lunedi": "2027-01-25",
+   "titolo": "Onda 4 · settimana 1",
+   "giorni": {
+    "lun": [
+     {
+      "es": "Panca piana · progressione 1",
+      "pct": 72.5,
+      "base": "panca",
+      "rip": "6",
+      "serie": "6",
+      "nota": ""
+     },
+     {
+      "es": "Stacco · carico fisso",
+      "pct": 80,
+      "base": "stacco",
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Bicipiti e tricipiti, core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "mar": [
+     {
+      "es": "Military · progressione",
+      "pct": 80,
+      "base": "m2",
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Panca stretta · carico fisso",
+      "pct": 67.5,
+      "base": "panca",
+      "rip": "6",
+      "serie": "5",
+      "nota": "−2,5% se troppo pesante dopo la military"
+     },
+     {
+      "es": "Pressa · pesante",
+      "kg": 200,
+      "rip": "6",
+      "serie": "5",
+      "nota": "da confermare dopo l'onda 2"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "3",
+      "nota": "da ~60 kg; tutte a 12 → +10 kg"
+     },
+     {
+      "es": "Lat machine",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "gio": [
+     {
+      "es": "Panca piana · progressione 2",
+      "pct": 87.5,
+      "base": "panca",
+      "rip": "3",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Stacco standard",
+      "schema": "3 MAV + back-off 90%",
+      "rip": "3 / 3",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Military · media",
+      "pct": 67.5,
+      "base": "m2",
+      "rip": "5",
+      "serie": "5",
+      "nota": "veloce, lontano dal cedimento"
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "ven": [
+     {
+      "es": "Military · ramping",
+      "schema": "3 MAV + back-off 90%",
+      "rip": "3 / 4",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Panca piana · ramping",
+      "schema": "3 MAV + back-off 85%",
+      "rip": "3 / 3",
+      "serie": "1 + 4",
+      "nota": "rif. ciclo scorso: 3 MAV 107,5, 2 MAV 110"
+     },
+     {
+      "es": "Pressa · volume",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "4",
+      "nota": "da 140 kg; tutte a 12 → +5 kg"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "6-8",
+      "serie": "3",
+      "nota": "da ~70 kg; tutte a 8 → +10 kg"
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ]
+   }
+  },
+  {
+   "n": 11,
+   "lunedi": "2027-02-01",
+   "titolo": "Onda 4 · settimana 2",
+   "giorni": {
+    "lun": [
+     {
+      "es": "Panca piana · progressione 1",
+      "pct": 77.5,
+      "base": "panca",
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Stacco · carico fisso",
+      "pct": 85,
+      "base": "stacco",
+      "rip": "2",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Bicipiti e tricipiti, core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "mar": [
+     {
+      "es": "Military · progressione",
+      "pct": 85,
+      "base": "m2",
+      "rip": "3",
+      "serie": "6",
+      "nota": ""
+     },
+     {
+      "es": "Panca stretta · carico fisso",
+      "pct": 72.5,
+      "base": "panca",
+      "rip": "5",
+      "serie": "5",
+      "nota": "−2,5% se troppo pesante dopo la military"
+     },
+     {
+      "es": "Pressa · pesante",
+      "kg": 210,
+      "rip": "5",
+      "serie": "5",
+      "nota": "da confermare dopo l'onda 2"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "3",
+      "nota": "da ~60 kg; tutte a 12 → +10 kg"
+     },
+     {
+      "es": "Lat machine",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "gio": [
+     {
+      "es": "Panca piana · progressione 2",
+      "pct": 92.5,
+      "base": "panca",
+      "rip": "2",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Stacco standard",
+      "schema": "2 MAV + back-off 90%",
+      "rip": "2 / 2",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Military · media",
+      "pct": 67.5,
+      "base": "m2",
+      "rip": "5",
+      "serie": "5",
+      "nota": "veloce, lontano dal cedimento"
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "ven": [
+     {
+      "es": "Military · ramping",
+      "schema": "2 MAV + back-off 80%",
+      "rip": "2 / 5",
+      "serie": "1 + 5",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Panca piana · ramping",
+      "schema": "2 MAV + back-off 85%",
+      "rip": "2 / 2",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Pressa · volume",
+      "schema": "doppia progressione",
+      "rip": "8-12",
+      "serie": "4",
+      "nota": "da 140 kg; tutte a 12 → +5 kg"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "doppia progressione",
+      "rip": "6-8",
+      "serie": "3",
+      "nota": "da ~70 kg; tutte a 8 → +10 kg"
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ]
+   }
+  },
+  {
+   "n": 12,
+   "lunedi": "2027-02-08",
+   "titolo": "Onda 4 · settimana 3",
+   "giorni": {
+    "lun": [
+     {
+      "es": "Panca piana · progressione 1",
+      "pct": 82.5,
+      "base": "panca",
+      "rip": "4",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Stacco · carico fisso",
+      "pct": 75,
+      "base": "stacco",
+      "rip": "5",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Bicipiti e tricipiti, core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "mar": [
+     {
+      "es": "Military · progressione",
+      "pct": 80,
+      "base": "m2",
+      "rip": "2",
+      "serie": "4",
+      "nota": "scarico"
+     },
+     {
+      "es": "Panca stretta · carico fisso",
+      "pct": 77.5,
+      "base": "panca",
+      "rip": "4",
+      "serie": "5",
+      "nota": "−2,5% se troppo pesante dopo la military"
+     },
+     {
+      "es": "Pressa · pesante",
+      "kg": 220,
+      "rip": "4",
+      "serie": "5",
+      "nota": "da confermare dopo l'onda 2"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "senza progressione",
+      "rip": "8-12",
+      "serie": "2",
+      "nota": ""
+     },
+     {
+      "es": "Lat machine",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "gio": [
+     {
+      "es": "Panca piana · progressione 2",
+      "pct": 97.5,
+      "base": "panca",
+      "rip": "1",
+      "serie": "4",
+      "nota": ""
+     },
+     {
+      "es": "Stacco standard",
+      "schema": "1 MAV",
+      "rip": "1",
+      "serie": "1",
+      "nota": "nessun back-off; back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Military · media",
+      "pct": 65,
+      "base": "m2",
+      "rip": "5",
+      "serie": "3",
+      "nota": "scarico"
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "ven": [
+     {
+      "es": "Military",
+      "pct": 80,
+      "base": "m2",
+      "rip": "2",
+      "serie": "4",
+      "nota": "scarico"
+     },
+     {
+      "es": "Panca piana · ramping",
+      "schema": "1 MAV + back-off 85%",
+      "rip": "1 / 1",
+      "serie": "1 + 4",
+      "nota": "back-off = % del MAV del giorno"
+     },
+     {
+      "es": "Pressa · volume",
+      "schema": "carico attuale",
+      "rip": "8",
+      "serie": "3",
+      "nota": "scarico prima del test"
+     },
+     {
+      "es": "Shoulder press",
+      "schema": "senza progressione",
+      "rip": "6-8",
+      "serie": "2",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ]
+   }
+  },
+  {
+   "n": 13,
+   "lunedi": "2027-02-15",
+   "titolo": "Scarico e test",
+   "giorni": {
+    "lun": [
+     {
+      "es": "Panca piana",
+      "kg": 100,
+      "rip": "2",
+      "serie": "5",
+      "nota": "80% di 125, come prima del test di novembre"
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": "niente stacco"
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "mar": [
+     {
+      "es": "Military · TEST",
+      "schema": "ramping a singole",
+      "rip": "1",
+      "serie": "",
+      "nota": "es. 40×3, 45×2, 50×1, 55×1, 57,5×1, poi +2,5"
+     },
+     {
+      "es": "Pressa · leggera",
+      "kg": 160,
+      "rip": "5",
+      "serie": "3",
+      "nota": ""
+     },
+     {
+      "es": "Lat machine",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": ""
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": ""
+     }
+    ],
+    "gio": [
+     {
+      "es": "Panca piana · TEST",
+      "schema": "ramping a singole",
+      "rip": "1",
+      "serie": "",
+      "nota": "60×4, 70×2, 80×1, 90×1, 100×1, 110×1, 120×1, poi 127,5 e se va 130"
+     },
+     {
+      "es": "Pulley",
+      "schema": "",
+      "rip": "",
+      "serie": "5",
+      "nota": "leggero"
+     }
+    ],
+    "ven": [
+     {
+      "es": "Pressa · TEST 6RM",
+      "schema": "ramping",
+      "rip": "6",
+      "serie": "",
+      "nota": "es. 120×5, 160×5, 200×3, poi a salire; rif. 200×6"
+     },
+     {
+      "es": "Core",
+      "schema": "",
+      "rip": "",
+      "serie": "",
+      "nota": "niente stacco: nessun test"
+     }
+    ]
+   }
+  }
+ ]
+}

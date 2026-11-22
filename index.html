@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scheda allenamento</title>
+<meta name="theme-color" content="#14161a">
+<style>
+:root{
+  --bg:#f6f5f2; --card:#ffffff; --ink:#1c1d21; --muted:#6b6e76; --line:#e3e1dc;
+  --accent:#c2410c; --accent-ink:#ffffff; --chip:#f0eee9; --ok:#15803d;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#14161a; --card:#1d2026; --ink:#eceae6; --muted:#9a9da5; --line:#2c3038;
+         --accent:#fb923c; --accent-ink:#1a1206; --chip:#262a31; --ok:#4ade80; }
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:640px;margin:0 auto;padding:12px 16px 48px}
+header{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 10px;border-bottom:1px solid var(--line)}
+.weeknav{display:flex;align-items:center;gap:8px}
+.weeknav button{flex:0 0 44px;height:44px;border-radius:10px;border:1px solid var(--line);
+  background:var(--card);color:var(--ink);font-size:22px;cursor:pointer}
+.weeknav .t{flex:1;text-align:center}
+.weeknav .t b{display:block;font-size:19px}
+.weeknav .t span{color:var(--muted);font-size:14px}
+.days{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px}
+.days button{height:42px;border-radius:10px;border:1px solid var(--line);background:var(--card);
+  color:var(--ink);font-size:15px;font-weight:600;cursor:pointer}
+.days button.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.days button .d{display:block;font-size:11px;font-weight:400;opacity:.8}
+.today{display:inline-block;margin-top:8px;font-size:13px;color:var(--muted)}
+.today a{color:var(--accent);cursor:pointer;text-decoration:underline}
+.list{margin-top:14px;display:flex;flex-direction:column;gap:10px}
+.ex{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.ex .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.ex h3{margin:0;font-size:16px;font-weight:650;min-width:0;overflow-wrap:anywhere}
+.ex .kg{font-size:24px;font-weight:750;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ex .kg small{font-size:13px;font-weight:500;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{background:var(--chip);border-radius:999px;padding:3px 10px;font-size:13.5px;font-variant-numeric:tabular-nums}
+.chip b{font-weight:650}
+.nota{margin-top:8px;font-size:13.5px;color:var(--muted)}
+.minor{padding:9px 14px}
+.minor h3{font-weight:500;font-size:15px}
+section.box{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-top:18px}
+section.box summary{padding:13px 14px;font-weight:650;cursor:pointer;list-style:none}
+section.box summary::-webkit-details-marker{display:none}
+section.box summary::after{content:"＋";float:right;color:var(--muted)}
+section.box details[open] summary::after{content:"－"}
+.inner{padding:0 14px 14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+label{font-size:13px;color:var(--muted);display:block}
+input[type=number]{width:100%;height:44px;border-radius:10px;border:1px solid var(--line);
+  background:var(--bg);color:var(--ink);font-size:18px;padding:0 10px;margin-top:3px}
+.row{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.row button{flex:1;min-width:60px;height:42px;border-radius:10px;border:1px solid var(--line);
+  background:var(--bg);color:var(--ink);font-size:15px;cursor:pointer}
+.row button.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.res{margin-top:12px;font-size:28px;font-weight:750;text-align:center;font-variant-numeric:tabular-nums}
+.res small{display:block;font-size:13px;font-weight:400;color:var(--muted)}
+.hint{font-size:13px;color:var(--muted);margin:10px 0 0}
+.saved{color:var(--ok)}
+ul.rules{margin:0;padding-left:18px;font-size:14.5px}
+ul.rules li{margin:5px 0}
+.err{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:14px;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="weeknav">
+      <button id="prev" aria-label="Settimana precedente">‹</button>
+      <div class="t"><b id="wtitle">…</b><span id="wsub"></span></div>
+      <button id="next" aria-label="Settimana successiva">›</button>
+    </div>
+    <div class="days" id="days"></div>
+    <span class="today" id="today"></span>
+  </header>
+
+  <div class="list" id="list"></div>
+
+  <section class="box"><details>
+    <summary>Calcolo back-off</summary>
+    <div class="inner">
+      <label for="mav">MAV del giorno (kg)</label>
+      <input id="mav" type="number" inputmode="decimal" step="2.5" placeholder="es. 100">
+      <div class="row" id="bopct"></div>
+      <div class="res" id="bores">–<small>arrotondato a 2,5 kg</small></div>
+    </div>
+  </details></section>
+
+  <section class="box"><details id="setbox">
+    <summary>Massimali di calcolo</summary>
+    <div class="inner">
+      <div class="grid">
+        <div><label for="m-panca">Panca (piana e stretta)</label><input id="m-panca" type="number" inputmode="decimal" step="2.5"></div>
+        <div><label for="m-military">Military, sett. 1-6</label><input id="m-military" type="number" inputmode="decimal" step="2.5"></div>
+        <div><label for="m-m2">Military M2, sett. 7-12</label><input id="m-m2" type="number" inputmode="decimal" step="2.5"></div>
+        <div><label for="m-stacco">Stacco</label><input id="m-stacco" type="number" inputmode="decimal" step="2.5"></div>
+      </div>
+      <p class="hint">M2 è il risultato del MAV da 1 del martedì della settimana 6 (provvisorio: 62,5). Se la schiena protesta, lo stacco si ricalcola su 100. I valori restano salvati su questo telefono. <span id="savedmsg" class="saved"></span></p>
+      <div class="row"><button id="reset">Ripristina i valori del programma</button></div>
+    </div>
+  </details></section>
+
+  <section class="box"><details>
+    <summary>Regole</summary>
+    <div class="inner"><ul class="rules">
+      <li><b>MAV da N</b>: il miglior carico tenuto pulito per N ripetizioni, salendo a piccoli salti. <b>Back-off</b> = % del MAV del giorno. "1 + 4" = il MAV e 4 serie di back-off; "3 / 3" = ripetizioni del MAV / del back-off.</li>
+      <li><b>Panca, settimane 3-6-9</b>: le ultime 2 serie (lunedì) e le ultime 2 singole (giovedì) solo se le prime 4 sono veloci.</li>
+      <li><b>Se il martedì la military perde ripetizioni</b>: togli prima le serie in più del lunedì di panca (settimane 1-5).</li>
+      <li><b>Military martedì</b>: si chiudono tutte le serie; se una non si chiude, la settimana dopo si ripete il carico. <b>Giovedì</b>: veloce, circa RPE 7; con la schiena stanca, manubri da seduto senza schienale.</li>
+      <li><b>Shoulder press</b>: mai al cedimento. Se la military del giorno dopo cala, togline una seduta.</li>
+      <li><b>Stacco</b>: se la schiena protesta, ricalcola su 100 e togli per prima la seconda seduta.</li>
+      <li><b>Pressa</b>: ferma la discesa prima che il bacino si stacchi dallo schienale; niente cedimento sulle serie da 10-12.</li>
+      <li><b>Settimana persa</b>: si sposta tutto avanti di una settimana, non la si salta.</li>
+    </ul></div>
+  </details></section>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var GIORNI = [["lun","Lun",0],["mar","Mar",1],["gio","Gio",3],["ven","Ven",4]];
+  var KEY = "allenamento-massimali-v1";
+  var dati = null, sett = 1, giorno = "lun", massimali = {}, boPct = 85;
+
+  function r25(x){ return Math.round(x/2.5)*2.5; }
+  function fmt(x){ return String(Math.round(x*100)/100).replace(".", ","); }
+  function el(tag, cls, txt){ var e=document.createElement(tag); if(cls) e.className=cls; if(txt!=null) e.textContent=txt; return e; }
+  function parseISO(s){ var p=s.split("-"); return new Date(+p[0], +p[1]-1, +p[2]); }
+  function addDays(d,n){ var x=new Date(d); x.setDate(x.getDate()+n); return x; }
+  function ddmm(d){ return ("0"+d.getDate()).slice(-2)+"/"+("0"+(d.getMonth()+1)).slice(-2); }
+
+  function load(){ try{ var s=localStorage.getItem(KEY); return s?JSON.parse(s):null; }catch(e){ return null; } }
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(massimali)); flash("salvato"); }catch(e){ flash("non salvato su questo browser"); } }
+  function flash(t){ var m=document.getElementById("savedmsg"); m.textContent=t; setTimeout(function(){ m.textContent=""; }, 1500); }
+
+  function oggi(){
+    var start = parseISO(dati.inizio), now = new Date();
+    now = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var diff = Math.floor((now - start)/86400000);
+    if (diff < 0) return {s:1, g:"lun", label:"il ciclo inizia lunedì "+ddmm(start)};
+    var s = Math.floor(diff/7)+1, wd = diff%7;
+    if (s > dati.settimane.length) return {s:dati.settimane.length, g:"ven", label:"ciclo concluso"};
+    var g = wd===0?"lun": wd===1?"mar": wd===2?"gio": wd===3?"gio": wd===4?"ven": null;
+    if (g===null){ // sabato o domenica: prossima seduta
+      if (s < dati.settimane.length) return {s:s+1, g:"lun", label:"prossima seduta"};
+      return {s:s, g:"ven", label:"ciclo concluso"};
+    }
+    return {s:s, g:g, label: (wd===2?"domani":"oggi")};
+  }
+
+  function render(){
+    var w = dati.settimane[sett-1];
+    var lun = parseISO(w.lunedi);
+    document.getElementById("wtitle").textContent = "Settimana "+w.n;
+    document.getElementById("wsub").textContent = w.titolo+" · dal "+ddmm(lun);
+    document.getElementById("prev").disabled = sett<=1;
+    document.getElementById("next").disabled = sett>=dati.settimane.length;
+
+    var days = document.getElementById("days"); days.innerHTML="";
+    GIORNI.forEach(function(g){
+      var b = el("button", g[0]===giorno?"on":"", g[1]);
+      b.appendChild(el("span","d", ddmm(addDays(lun,g[2]))));
+      b.onclick = function(){ giorno=g[0]; render(); };
+      days.appendChild(b);
+    });
+
+    var o = oggi(), t = document.getElementById("today"); t.innerHTML="";
+    if (o.s!==sett || o.g!==giorno){
+      t.appendChild(document.createTextNode(o.label.charAt(0).toUpperCase()+o.label.slice(1)+": sett. "+o.s+", "+o.g+" · "));
+      var a = el("a",null,"vai"); a.onclick=function(){ sett=o.s; giorno=o.g; render(); }; t.appendChild(a);
+    } else {
+      t.textContent = o.label.charAt(0).toUpperCase()+o.label.slice(1);
+    }
+
+    var list = document.getElementById("list"); list.innerHTML="";
+    w.giorni[giorno].forEach(function(x){
+      var minor = !x.pct && !x.kg && !x.schema && !x.rip;
+      var c = el("div", "ex"+(minor && !x.serie ? " minor":""));
+      var top = el("div","top");
+      top.appendChild(el("h3", null, x.es));
+      var kgv = null, sub = "";
+      if (x.pct!=null){
+        var m = massimali[x.base];
+        kgv = r25(m*x.pct/100);
+        sub = fmt(x.pct)+"% di "+fmt(m)+(x.base==="m2"?" (M2)":"");
+      } else if (x.kg!=null){ kgv = x.kg; }
+      if (kgv!=null){
+        var k = el("div","kg", fmt(kgv)); k.appendChild(el("small",null," kg")); top.appendChild(k);
+      }
+      c.appendChild(top);
+      var chips = el("div","chips"), any=false;
+      function chip(lbl, v){ if(!v) return; var s=el("span","chip"); s.appendChild(document.createTextNode(lbl+" ")); s.appendChild(el("b",null,v)); chips.appendChild(s); any=true; }
+      if (x.schema){ var s=el("span","chip"); s.appendChild(el("b",null,x.schema)); chips.appendChild(s); any=true; }
+      if (sub){ var p=el("span","chip",sub); chips.appendChild(p); any=true; }
+      chip("Rip", x.rip); chip("Serie", x.serie);
+      if (any) c.appendChild(chips);
+      if (x.nota) c.appendChild(el("div","nota", x.nota));
+      list.appendChild(c);
+    });
+    try{ sessionStorage.setItem("allenamento-vista", JSON.stringify({s:sett,g:giorno})); }catch(e){}
+  }
+
+  function setupMassimali(){
+    var saved = load();
+    massimali = Object.assign({}, dati.massimali, saved||{});
+    ["panca","military","m2","stacco"].forEach(function(k){
+      var i = document.getElementById("m-"+k);
+      i.value = massimali[k];
+      i.onchange = function(){
+        var v = parseFloat(String(i.value).replace(",", "."));
+        if (v>0){ massimali[k]=v; save(); render(); } else { i.value = massimali[k]; }
+      };
+    });
+    document.getElementById("reset").onclick = function(){
+      massimali = Object.assign({}, dati.massimali);
+      try{ localStorage.removeItem(KEY); }catch(e){}
+      ["panca","military","m2","stacco"].forEach(function(k){ document.getElementById("m-"+k).value = massimali[k]; });
+      flash("ripristinato"); render();
+    };
+  }
+
+  function setupBackoff(){
+    var row = document.getElementById("bopct"), inp = document.getElementById("mav");
+    function calc(){
+      var v = parseFloat(String(inp.value).replace(",", "."));
+      var r = document.getElementById("bores");
+      r.innerHTML = "";
+      r.appendChild(document.createTextNode(v>0 ? fmt(r25(v*boPct/100))+" kg" : "–"));
+      r.appendChild(el("small",null, v>0 ? boPct+"% di "+fmt(v)+", arrotondato a 2,5 kg" : "arrotondato a 2,5 kg"));
+    }
+    [80,85,90,95].forEach(function(p){
+      var b = el("button", p===boPct?"on":"", p+"%");
+      b.onclick = function(){ boPct=p; Array.prototype.forEach.call(row.children,function(c){c.className="";}); b.className="on"; calc(); };
+      row.appendChild(b);
+    });
+    inp.oninput = calc;
+  }
+
+  document.getElementById("prev").onclick = function(){ if(sett>1){ sett--; render(); } };
+  document.getElementById("next").onclick = function(){ if(sett<dati.settimane.length){ sett++; render(); } };
+
+  fetch("programma.json", {cache:"no-cache"}).then(function(r){
+    if(!r.ok) throw new Error("HTTP "+r.status); return r.json();
+  }).then(function(d){
+    dati = d;
+    setupMassimali(); setupBackoff();
+    var v = null; try{ v = JSON.parse(sessionStorage.getItem("allenamento-vista")); }catch(e){}
+    var h = /^#(\d+)-(lun|mar|gio|ven)$/.exec(location.hash);   // es. #6-ven
+    if (h && +h[1]>=1 && +h[1]<=d.settimane.length) v = {s:+h[1], g:h[2]};
+    var o = oggi();
+    sett = v ? v.s : o.s; giorno = v ? v.g : o.g;
+    render();
+  }).catch(function(e){
+    var box = el("div","err","Impossibile caricare programma.json ("+e.message+"). La pagina va aperta da un server web, non come file locale.");
+    document.getElementById("list").appendChild(box);
+  });
+})();
+</script>
+</body>
+</html>

@@ -124,7 +124,7 @@ ul.rules li{margin:5px 0}
 (function(){
   "use strict";
   var GIORNI = [["lun","Lun",0],["mar","Mar",1],["gio","Gio",3],["ven","Ven",4]];
-  var KEY = "allenamento-massimali-v1";
+  var KEY = "allenamento-massimali-v2";   // v2: si salvano solo i valori cambiati rispetto al programma
   var dati = null, sett = 1, giorno = "lun", massimali = {}, boPct = 85;
 
   function r25(x){ return Math.round(x/2.5)*2.5; }
@@ -135,7 +135,11 @@ ul.rules li{margin:5px 0}
   function ddmm(d){ return ("0"+d.getDate()).slice(-2)+"/"+("0"+(d.getMonth()+1)).slice(-2); }
 
   function load(){ try{ var s=localStorage.getItem(KEY); return s?JSON.parse(s):null; }catch(e){ return null; } }
-  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(massimali)); flash("salvato"); }catch(e){ flash("non salvato su questo browser"); } }
+  function save(){
+    var diff = {};
+    Object.keys(massimali).forEach(function(k){ if (massimali[k] !== dati.massimali[k]) diff[k] = massimali[k]; });
+    try{ localStorage.setItem(KEY, JSON.stringify(diff)); flash("salvato"); }catch(e){ flash("non salvato su questo browser"); }
+  }
   function flash(t){ var m=document.getElementById("savedmsg"); m.textContent=t; setTimeout(function(){ m.textContent=""; }, 1500); }
 
   function oggi(){

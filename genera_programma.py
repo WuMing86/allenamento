@@ -9,7 +9,7 @@ import datetime as dt
 import json
 
 INIZIO = dt.date(2026, 11, 23)
-MASSIMALI = {"panca": 122.5, "military": 60, "m2": 62.5, "stacco": 110}
+MASSIMALI = {"panca": 125, "military": 60, "m2": 62.5, "stacco": 110}
 
 pm = [65, 70, 75, 67.5, 72.5, 77.5, 70, 75, 80, 72.5, 77.5, 82.5]
 pt = [80, 85, 90, 82.5, 87.5, 92.5, 85, 90, 95, 87.5, 92.5, 97.5]

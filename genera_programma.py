@@ -10,6 +10,9 @@ import json
 
 INIZIO = dt.date(2026, 11, 23)
 MASSIMALI = {"panca": 125, "military": 60, "m2": 62.5, "stacco": 110}
+# Carichi di partenza degli esercizi a doppia progressione (si aggiornano dalla pagina)
+CARICHI = {"pulley": 65, "pulley_pir": 55, "lat": 90, "sp_mar": 60, "sp_ven": 70, "pressa_vol": 140}
+PIRAMIDE = [[10, 0], [8, 5], [6, 10], [4, 15], [4, 15]]  # [ripetizioni, kg in più rispetto alla prima serie]
 
 pm = [65, 70, 75, 67.5, 72.5, 77.5, 70, 75, 80, 72.5, 77.5, 82.5]
 pt = [80, 85, 90, 82.5, 87.5, 92.5, 85, 90, 95, 87.5, 92.5, 97.5]
@@ -44,8 +47,11 @@ def kg(es, k, rip, serie, nota=""):
     return {"es": es, "kg": k, "rip": str(rip), "serie": str(serie), "nota": nota}
 
 
-def libero(es, schema="", rip="", serie="", nota=""):
-    return {"es": es, "schema": schema, "rip": str(rip), "serie": str(serie), "nota": nota}
+def libero(es, schema="", rip="", serie="", nota="", prog=None):
+    d = {"es": es, "schema": schema, "rip": str(rip), "serie": str(serie), "nota": nota}
+    if prog:
+        d["prog"] = prog
+    return d
 
 
 settimane = []
@@ -55,7 +61,7 @@ for w in range(12):
         pct("Panca piana · progressione 1", pm[w], "panca", rip_onda[w], serie_l[w],
             "ultime 2 serie solo se le prime 4 sono veloci" if s3 else ""),
         pct("Stacco · carico fisso", dl_pct[w], "stacco", dl_rip[w], 5),
-        libero("Pulley · carico fisso", "doppia progressione", "6-8", 5, "da 65 kg; tutte a 8 → +5 kg"),
+        libero("Pulley · carico fisso", "doppia progressione", "6-8", 5, "tutte a 8 → +5 kg e riparti da 6", "pulley"),
         libero("Bicipiti e tricipiti, core"),
     ]
     if w < 6:
@@ -73,8 +79,8 @@ for w in range(12):
             "−2,5% se troppo pesante dopo la military"),
         kg("Pressa · pesante", pressa[w], rip_onda[w], 5, "da confermare dopo l'onda 2" if w >= 9 else ""),
         libero("Shoulder press", "doppia progressione" if w < 11 else "senza progressione",
-               "8-12", 3 if w < 11 else 2, "da ~60 kg; tutte a 12 → +10 kg" if w < 11 else ""),
-        libero("Lat machine · carico fisso", "doppia progressione", "5-8", 5, "da 90 kg; tutte a 8 → +5 kg"),
+               "8-12", 3 if w < 11 else 2, "tutte a 12 → +10 kg e riparti da 8" if w < 11 else "", "sp_mar"),
+        libero("Lat machine · carico fisso", "doppia progressione", "5-8", 5, "tutte a 8 → +5 kg e riparti da 5", "lat"),
         libero("Core"),
     ]
     if w < 6:
@@ -89,8 +95,8 @@ for w in range(12):
             "ultime 2 singole solo se le prime 4 sono veloci" if s3 else ""),
         libero(dl_var[w], mv[0], mv[1], mv[2], (mv[3] + "; " if mv[3] else "") + "back-off = % del MAV del giorno"),
         mil_g,
-        libero("Pulley · piramidale", "55×10, 60×8, 65×6, 70×4, 70×4", "10-8-6-4-4", 5,
-               "kg di partenza; ultime due da 4 facili → +5 kg su tutta la piramide"),
+        dict(libero("Pulley · piramidale", "", "10-8-6-4-4", 5,
+                    "ultime due da 4 facili → +5 kg su tutta la piramide", "pulley_pir"), piramide=PIRAMIDE),
         libero("Core"),
     ]
     if w in (5, 11):
@@ -104,10 +110,10 @@ for w in range(12):
     ven = [
         mil_v,
         libero(var_ven[w] + " · ramping", sch[0], sch[1], "1 + 4", rif_ven.get(w, "back-off = % del MAV del giorno")),
-        (libero("Pressa · volume", "carico attuale", 8, 3, "scarico prima del test") if w == 11 else
-         libero("Pressa · volume", "doppia progressione", "8-12", 4, "da 140 kg; tutte a 12 → +5 kg")),
+        (libero("Pressa · volume", "", 8, 3, "scarico prima del test", "pressa_vol") if w == 11 else
+         libero("Pressa · volume", "doppia progressione", "8-12", 4, "tutte a 12 → +5 kg e riparti da 8", "pressa_vol")),
         libero("Shoulder press", "doppia progressione" if w < 11 else "senza progressione",
-               "6-8", 3 if w < 11 else 2, "da ~70 kg; tutte a 8 → +10 kg" if w < 11 else ""),
+               "6-8", 3 if w < 11 else 2, "tutte a 8 → +10 kg e riparti da 6" if w < 11 else "", "sp_ven"),
         libero("Core"),
     ]
     settimane.append({"n": w + 1, "lunedi": (INIZIO + dt.timedelta(weeks=w)).isoformat(),
@@ -129,7 +135,7 @@ settimane.append({
                 libero("Core", nota="niente stacco: nessun test")],
     }})
 
-dati = {"inizio": INIZIO.isoformat(), "massimali": MASSIMALI, "settimane": settimane}
+dati = {"inizio": INIZIO.isoformat(), "massimali": MASSIMALI, "carichi": CARICHI, "settimane": settimane}
 with open("programma.json", "w", encoding="utf-8") as f:
     json.dump(dati, f, ensure_ascii=False, indent=1)
 print("programma.json:", len(settimane), "settimane")

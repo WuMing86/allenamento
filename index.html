@@ -70,6 +70,9 @@ ul.rules li{margin:5px 0}
 .donebtn small{display:block;font-size:12px;font-weight:400;opacity:.85}
 .days button .ck{color:var(--ok);font-weight:700;margin-left:3px}
 .days button.on .ck{color:var(--accent-ink)}
+.kgwrap{display:flex;align-items:center;gap:8px}
+.step{width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:var(--bg);
+  color:var(--ink);font-size:20px;line-height:1;cursor:pointer;flex:0 0 36px}
 .err{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:14px;margin-top:14px}
 </style>
 </head>
@@ -112,6 +115,15 @@ ul.rules li{margin:5px 0}
   </details></section>
 
   <section class="box"><details>
+    <summary>Carichi delle progressioni</summary>
+    <div class="inner">
+      <div class="grid" id="cargrid"></div>
+      <p class="hint">Esercizi a doppia progressione: quando chiudi tutte le serie al massimo delle ripetizioni, aumenta il carico qui o con il + sulla scheda dell'esercizio. Per il pulley piramidale si inserisce il carico della prima serie (quella da 10). <span id="carmsg" class="saved"></span></p>
+      <div class="row"><button id="carreset">Ripristina i carichi di partenza</button></div>
+    </div>
+  </details></section>
+
+  <section class="box"><details>
     <summary>Regole</summary>
     <div class="inner"><ul class="rules">
       <li><b>MAV da N</b>: il miglior carico tenuto pulito per N ripetizioni, salendo a piccoli salti. <b>Back-off</b> = % del MAV del giorno. "1 + 4" = il MAV e 4 serie di back-off; "3 / 3" = ripetizioni del MAV / del back-off.</li>
@@ -131,6 +143,11 @@ ul.rules li{margin:5px 0}
   "use strict";
   var GIORNI = [["lun","Lun",0],["mar","Mar",1],["gio","Gio",3],["ven","Ven",4]];
   var KEY = "allenamento-massimali-v2";   // v2: si salvano solo i valori cambiati rispetto al programma
+  var KEY_CAR = "allenamento-carichi-v1";   // solo i carichi cambiati rispetto a programma.json
+  // etichetta e salto di ogni carico a doppia progressione (salti come nelle regole del programma)
+  var PROG = [["pulley","Pulley, lunedì",5],["pulley_pir","Pulley piramidale, prima serie",5],["lat","Lat machine",5],
+              ["sp_mar","Shoulder press, martedì",10],["sp_ven","Shoulder press, venerdì",10],["pressa_vol","Pressa, venerdì",5]];
+  var carichi = {};
   var KEY_FATTE = "allenamento-fatte-v1";    // { "1-lun": "2026-11-23", ... } data in cui la seduta è stata segnata
   var dati = null, sett = 1, giorno = "lun", massimali = {}, boPct = 85, fatte = {};
   try{ fatte = JSON.parse(localStorage.getItem(KEY_FATTE)) || {}; }catch(e){ fatte = {}; }
@@ -199,19 +216,35 @@ ul.rules li{margin:5px 0}
       var c = el("div", "ex"+(minor && !x.serie ? " minor":""));
       var top = el("div","top");
       top.appendChild(el("h3", null, x.es));
-      var kgv = null, sub = "";
-      if (x.pct!=null){
+      var kgv = null, sub = "", schema = x.schema;
+      if (x.prog && x.piramide){
+        var b0 = carichi[x.prog];
+        schema = x.piramide.map(function(p){ return fmt(b0+p[1])+"×"+p[0]; }).join(", ");
+        kgv = b0;   // carico della prima serie: è quello che si modifica con − e +
+      } else if (x.prog){
+        kgv = carichi[x.prog];
+      } else if (x.pct!=null){
         var m = massimali[x.base];
         kgv = r25(m*x.pct/100);
         sub = fmt(x.pct)+"% di "+fmt(m)+(x.base==="m2"?" (M2)":"");
       } else if (x.kg!=null){ kgv = x.kg; }
+      var k = null;
       if (kgv!=null){
-        var k = el("div","kg", fmt(kgv)); k.appendChild(el("small",null," kg")); top.appendChild(k);
+        k = el("div","kg", fmt(kgv)); k.appendChild(el("small",null, x.piramide ? " kg 1ª" : " kg"));
       }
+      if (x.prog){
+        var wrap = el("div","kgwrap"), passo = stepDi(x.prog);
+        var meno = el("button","step","−"), piu = el("button","step","+");
+        meno.setAttribute("aria-label","Carico −"+passo+" kg"); piu.setAttribute("aria-label","Carico +"+passo+" kg");
+        meno.onclick = function(){ cambiaCarico(x.prog, -passo); };
+        piu.onclick = function(){ cambiaCarico(x.prog, passo); };
+        wrap.appendChild(meno); if (k) wrap.appendChild(k); wrap.appendChild(piu);
+        top.appendChild(wrap);
+      } else if (k) top.appendChild(k);
       c.appendChild(top);
       var chips = el("div","chips"), any=false;
       function chip(lbl, v){ if(!v) return; var s=el("span","chip"); s.appendChild(document.createTextNode(lbl+" ")); s.appendChild(el("b",null,v)); chips.appendChild(s); any=true; }
-      if (x.schema){ var s=el("span","chip"); s.appendChild(el("b",null,x.schema)); chips.appendChild(s); any=true; }
+      if (schema){ var s=el("span","chip"); s.appendChild(el("b",null,schema)); chips.appendChild(s); any=true; }
       if (sub){ var p=el("span","chip",sub); chips.appendChild(p); any=true; }
       chip("Rip", x.rip); chip("Serie", x.serie);
       if (any) c.appendChild(chips);
@@ -250,6 +283,43 @@ ul.rules li{margin:5px 0}
     };
   }
 
+  function stepDi(key){ for (var i=0;i<PROG.length;i++) if (PROG[i][0]===key) return PROG[i][2]; return 5; }
+  function salvaCarichi(){
+    var diff = {};
+    Object.keys(carichi).forEach(function(k){ if (carichi[k] !== dati.carichi[k]) diff[k] = carichi[k]; });
+    try{ localStorage.setItem(KEY_CAR, JSON.stringify(diff)); return true; }catch(e){ return false; }
+  }
+  function flashCar(t){ var m=document.getElementById("carmsg"); m.textContent=t; setTimeout(function(){ m.textContent=""; }, 1500); }
+  function cambiaCarico(key, delta){
+    var v = Math.round((carichi[key]+delta)*100)/100;
+    if (v <= 0) return;
+    carichi[key] = v;
+    salvaCarichi();
+    var i = document.getElementById("c-"+key); if (i) i.value = v;
+    render();
+  }
+  function setupCarichi(){
+    var saved = null; try{ saved = JSON.parse(localStorage.getItem(KEY_CAR)); }catch(e){}
+    carichi = Object.assign({}, dati.carichi, saved||{});
+    var grid = document.getElementById("cargrid"); grid.innerHTML = "";
+    PROG.forEach(function(p){
+      var d = el("div"), l = el("label", null, p[1]), i = document.createElement("input");
+      l.setAttribute("for","c-"+p[0]); i.id = "c-"+p[0]; i.type="number"; i.step="2.5"; i.setAttribute("inputmode","decimal");
+      i.value = carichi[p[0]];
+      i.onchange = function(){
+        var v = parseFloat(String(i.value).replace(",", "."));
+        if (v>0){ carichi[p[0]]=v; flashCar(salvaCarichi()?"salvato":"non salvato su questo browser"); render(); } else { i.value = carichi[p[0]]; }
+      };
+      d.appendChild(l); d.appendChild(i); grid.appendChild(d);
+    });
+    document.getElementById("carreset").onclick = function(){
+      carichi = Object.assign({}, dati.carichi);
+      try{ localStorage.removeItem(KEY_CAR); }catch(e){}
+      PROG.forEach(function(p){ document.getElementById("c-"+p[0]).value = carichi[p[0]]; });
+      flashCar("ripristinato"); render();
+    };
+  }
+
   function setupBackoff(){
     var row = document.getElementById("bopct"), inp = document.getElementById("mav");
     function calc(){
@@ -274,7 +344,7 @@ ul.rules li{margin:5px 0}
     if(!r.ok) throw new Error("HTTP "+r.status); return r.json();
   }).then(function(d){
     dati = d;
-    setupMassimali(); setupBackoff();
+    setupMassimali(); setupCarichi(); setupBackoff();
     var v = null; try{ v = JSON.parse(sessionStorage.getItem("allenamento-vista")); }catch(e){}
     var h = /^#(\d+)-(lun|mar|gio|ven)$/.exec(location.hash);   // es. #6-ven
     if (h && +h[1]>=1 && +h[1]<=d.settimane.length) v = {s:+h[1], g:h[2]};

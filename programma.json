@@ -30,11 +30,11 @@
       "nota": ""
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "6-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 65 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Bicipiti e tricipiti, core",
@@ -76,11 +76,11 @@
       "nota": "da ~60 kg; tutte a 12 → +10 kg"
      },
      {
-      "es": "Lat machine",
-      "schema": "",
-      "rip": "",
+      "es": "Lat machine · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "5-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 90 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Core",
@@ -115,11 +115,11 @@
       "nota": "veloce, lontano dal cedimento"
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · piramidale",
+      "schema": "55×10, 60×8, 65×6, 70×4, 70×4",
+      "rip": "10-8-6-4-4",
       "serie": "5",
-      "nota": ""
+      "nota": "kg di partenza; ultime due da 4 facili → +5 kg su tutta la piramide"
      },
      {
       "es": "Core",
@@ -191,11 +191,11 @@
       "nota": ""
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "6-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 65 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Bicipiti e tricipiti, core",
@@ -237,11 +237,11 @@
       "nota": "da ~60 kg; tutte a 12 → +10 kg"
      },
      {
-      "es": "Lat machine",
-      "schema": "",
-      "rip": "",
+      "es": "Lat machine · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "5-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 90 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Core",
@@ -276,11 +276,11 @@
       "nota": "veloce, lontano dal cedimento"
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · piramidale",
+      "schema": "55×10, 60×8, 65×6, 70×4, 70×4",
+      "rip": "10-8-6-4-4",
       "serie": "5",
-      "nota": ""
+      "nota": "kg di partenza; ultime due da 4 facili → +5 kg su tutta la piramide"
      },
      {
       "es": "Core",
@@ -352,11 +352,11 @@
       "nota": ""
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "6-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 65 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Bicipiti e tricipiti, core",
@@ -398,11 +398,11 @@
       "nota": "da ~60 kg; tutte a 12 → +10 kg"
      },
      {
-      "es": "Lat machine",
-      "schema": "",
-      "rip": "",
+      "es": "Lat machine · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "5-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 90 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Core",
@@ -437,11 +437,11 @@
       "nota": "veloce, lontano dal cedimento"
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · piramidale",
+      "schema": "55×10, 60×8, 65×6, 70×4, 70×4",
+      "rip": "10-8-6-4-4",
       "serie": "5",
-      "nota": ""
+      "nota": "kg di partenza; ultime due da 4 facili → +5 kg su tutta la piramide"
      },
      {
       "es": "Core",
@@ -513,11 +513,11 @@
       "nota": ""
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "6-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 65 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Bicipiti e tricipiti, core",
@@ -559,11 +559,11 @@
       "nota": "da ~60 kg; tutte a 12 → +10 kg"
      },
      {
-      "es": "Lat machine",
-      "schema": "",
-      "rip": "",
+      "es": "Lat machine · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "5-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 90 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Core",
@@ -598,11 +598,11 @@
       "nota": "veloce, lontano dal cedimento"
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · piramidale",
+      "schema": "55×10, 60×8, 65×6, 70×4, 70×4",
+      "rip": "10-8-6-4-4",
       "serie": "5",
-      "nota": ""
+      "nota": "kg di partenza; ultime due da 4 facili → +5 kg su tutta la piramide"
      },
      {
       "es": "Core",
@@ -674,11 +674,11 @@
       "nota": ""
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "6-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 65 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Bicipiti e tricipiti, core",
@@ -720,11 +720,11 @@
       "nota": "da ~60 kg; tutte a 12 → +10 kg"
      },
      {
-      "es": "Lat machine",
-      "schema": "",
-      "rip": "",
+      "es": "Lat machine · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "5-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 90 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Core",
@@ -759,11 +759,11 @@
       "nota": "veloce, lontano dal cedimento"
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · piramidale",
+      "schema": "55×10, 60×8, 65×6, 70×4, 70×4",
+      "rip": "10-8-6-4-4",
       "serie": "5",
-      "nota": ""
+      "nota": "kg di partenza; ultime due da 4 facili → +5 kg su tutta la piramide"
      },
      {
       "es": "Core",
@@ -835,11 +835,11 @@
       "nota": ""
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "6-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 65 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Bicipiti e tricipiti, core",
@@ -880,11 +880,11 @@
       "nota": "da ~60 kg; tutte a 12 → +10 kg"
      },
      {
-      "es": "Lat machine",
-      "schema": "",
-      "rip": "",
+      "es": "Lat machine · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "5-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 90 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Core",
@@ -919,11 +919,11 @@
       "nota": "veloce, lontano dal cedimento"
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · piramidale",
+      "schema": "55×10, 60×8, 65×6, 70×4, 70×4",
+      "rip": "10-8-6-4-4",
       "serie": "5",
-      "nota": ""
+      "nota": "kg di partenza; ultime due da 4 facili → +5 kg su tutta la piramide"
      },
      {
       "es": "Core",
@@ -996,11 +996,11 @@
       "nota": ""
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "6-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 65 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Bicipiti e tricipiti, core",
@@ -1042,11 +1042,11 @@
       "nota": "da ~60 kg; tutte a 12 → +10 kg"
      },
      {
-      "es": "Lat machine",
-      "schema": "",
-      "rip": "",
+      "es": "Lat machine · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "5-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 90 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Core",
@@ -1081,11 +1081,11 @@
       "nota": "veloce, lontano dal cedimento"
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · piramidale",
+      "schema": "55×10, 60×8, 65×6, 70×4, 70×4",
+      "rip": "10-8-6-4-4",
       "serie": "5",
-      "nota": ""
+      "nota": "kg di partenza; ultime due da 4 facili → +5 kg su tutta la piramide"
      },
      {
       "es": "Core",
@@ -1157,11 +1157,11 @@
       "nota": ""
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "6-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 65 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Bicipiti e tricipiti, core",
@@ -1203,11 +1203,11 @@
       "nota": "da ~60 kg; tutte a 12 → +10 kg"
      },
      {
-      "es": "Lat machine",
-      "schema": "",
-      "rip": "",
+      "es": "Lat machine · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "5-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 90 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Core",
@@ -1242,11 +1242,11 @@
       "nota": "veloce, lontano dal cedimento"
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · piramidale",
+      "schema": "55×10, 60×8, 65×6, 70×4, 70×4",
+      "rip": "10-8-6-4-4",
       "serie": "5",
-      "nota": ""
+      "nota": "kg di partenza; ultime due da 4 facili → +5 kg su tutta la piramide"
      },
      {
       "es": "Core",
@@ -1318,11 +1318,11 @@
       "nota": ""
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "6-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 65 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Bicipiti e tricipiti, core",
@@ -1364,11 +1364,11 @@
       "nota": "da ~60 kg; tutte a 12 → +10 kg"
      },
      {
-      "es": "Lat machine",
-      "schema": "",
-      "rip": "",
+      "es": "Lat machine · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "5-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 90 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Core",
@@ -1403,11 +1403,11 @@
       "nota": "veloce, lontano dal cedimento"
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · piramidale",
+      "schema": "55×10, 60×8, 65×6, 70×4, 70×4",
+      "rip": "10-8-6-4-4",
       "serie": "5",
-      "nota": ""
+      "nota": "kg di partenza; ultime due da 4 facili → +5 kg su tutta la piramide"
      },
      {
       "es": "Core",
@@ -1479,11 +1479,11 @@
       "nota": ""
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "6-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 65 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Bicipiti e tricipiti, core",
@@ -1525,11 +1525,11 @@
       "nota": "da ~60 kg; tutte a 12 → +10 kg"
      },
      {
-      "es": "Lat machine",
-      "schema": "",
-      "rip": "",
+      "es": "Lat machine · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "5-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 90 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Core",
@@ -1564,11 +1564,11 @@
       "nota": "veloce, lontano dal cedimento"
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · piramidale",
+      "schema": "55×10, 60×8, 65×6, 70×4, 70×4",
+      "rip": "10-8-6-4-4",
       "serie": "5",
-      "nota": ""
+      "nota": "kg di partenza; ultime due da 4 facili → +5 kg su tutta la piramide"
      },
      {
       "es": "Core",
@@ -1640,11 +1640,11 @@
       "nota": ""
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "6-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 65 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Bicipiti e tricipiti, core",
@@ -1686,11 +1686,11 @@
       "nota": "da ~60 kg; tutte a 12 → +10 kg"
      },
      {
-      "es": "Lat machine",
-      "schema": "",
-      "rip": "",
+      "es": "Lat machine · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "5-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 90 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Core",
@@ -1725,11 +1725,11 @@
       "nota": "veloce, lontano dal cedimento"
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · piramidale",
+      "schema": "55×10, 60×8, 65×6, 70×4, 70×4",
+      "rip": "10-8-6-4-4",
       "serie": "5",
-      "nota": ""
+      "nota": "kg di partenza; ultime due da 4 facili → +5 kg su tutta la piramide"
      },
      {
       "es": "Core",
@@ -1801,11 +1801,11 @@
       "nota": ""
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "6-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 65 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Bicipiti e tricipiti, core",
@@ -1847,11 +1847,11 @@
       "nota": ""
      },
      {
-      "es": "Lat machine",
-      "schema": "",
-      "rip": "",
+      "es": "Lat machine · carico fisso",
+      "schema": "doppia progressione",
+      "rip": "5-8",
       "serie": "5",
-      "nota": ""
+      "nota": "da 90 kg; tutte a 8 → +5 kg"
      },
      {
       "es": "Core",
@@ -1886,11 +1886,11 @@
       "nota": "scarico"
      },
      {
-      "es": "Pulley",
-      "schema": "",
-      "rip": "",
+      "es": "Pulley · piramidale",
+      "schema": "55×10, 60×8, 65×6, 70×4, 70×4",
+      "rip": "10-8-6-4-4",
       "serie": "5",
-      "nota": ""
+      "nota": "kg di partenza; ultime due da 4 facili → +5 kg su tutta la piramide"
      },
      {
       "es": "Core",

@@ -55,7 +55,7 @@ for w in range(12):
         pct("Panca piana · progressione 1", pm[w], "panca", rip_onda[w], serie_l[w],
             "ultime 2 serie solo se le prime 4 sono veloci" if s3 else ""),
         pct("Stacco · carico fisso", dl_pct[w], "stacco", dl_rip[w], 5),
-        libero("Pulley", serie=5),
+        libero("Pulley · carico fisso", "doppia progressione", "6-8", 5, "da 65 kg; tutte a 8 → +5 kg"),
         libero("Bicipiti e tricipiti, core"),
     ]
     if w < 6:
@@ -74,7 +74,7 @@ for w in range(12):
         kg("Pressa · pesante", pressa[w], rip_onda[w], 5, "da confermare dopo l'onda 2" if w >= 9 else ""),
         libero("Shoulder press", "doppia progressione" if w < 11 else "senza progressione",
                "8-12", 3 if w < 11 else 2, "da ~60 kg; tutte a 12 → +10 kg" if w < 11 else ""),
-        libero("Lat machine", serie=5),
+        libero("Lat machine · carico fisso", "doppia progressione", "5-8", 5, "da 90 kg; tutte a 8 → +5 kg"),
         libero("Core"),
     ]
     if w < 6:
@@ -89,7 +89,8 @@ for w in range(12):
             "ultime 2 singole solo se le prime 4 sono veloci" if s3 else ""),
         libero(dl_var[w], mv[0], mv[1], mv[2], (mv[3] + "; " if mv[3] else "") + "back-off = % del MAV del giorno"),
         mil_g,
-        libero("Pulley", serie=5),
+        libero("Pulley · piramidale", "55×10, 60×8, 65×6, 70×4, 70×4", "10-8-6-4-4", 5,
+               "kg di partenza; ultime due da 4 facili → +5 kg su tutta la piramide"),
         libero("Core"),
     ]
     if w in (5, 11):

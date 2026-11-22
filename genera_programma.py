@@ -79,7 +79,7 @@ for w in range(12):
             "−2,5% se troppo pesante dopo la military"),
         kg("Pressa · pesante", pressa[w], rip_onda[w], 5, "da confermare dopo l'onda 2" if w >= 9 else ""),
         libero("Shoulder press", "doppia progressione" if w < 11 else "senza progressione",
-               "8-12", 3 if w < 11 else 2, "tutte a 12 → +10 kg e riparti da 8" if w < 11 else "", "sp_mar"),
+               "8-12", 3 if w < 11 else 2, "tutte a 12 → +5 kg e riparti da 8" if w < 11 else "", "sp_mar"),
         libero("Lat machine · carico fisso", "doppia progressione", "5-8", 5, "tutte a 8 → +5 kg e riparti da 5", "lat"),
         libero("Core"),
     ]
@@ -113,7 +113,7 @@ for w in range(12):
         (libero("Pressa · volume", "", 8, 3, "scarico prima del test", "pressa_vol") if w == 11 else
          libero("Pressa · volume", "doppia progressione", "8-12", 4, "tutte a 12 → +5 kg e riparti da 8", "pressa_vol")),
         libero("Shoulder press", "doppia progressione" if w < 11 else "senza progressione",
-               "6-8", 3 if w < 11 else 2, "tutte a 8 → +10 kg e riparti da 6" if w < 11 else "", "sp_ven"),
+               "6-8", 3 if w < 11 else 2, "tutte a 8 → +5 kg e riparti da 6" if w < 11 else "", "sp_ven"),
         libero("Core"),
     ]
     settimane.append({"n": w + 1, "lunedi": (INIZIO + dt.timedelta(weeks=w)).isoformat(),
